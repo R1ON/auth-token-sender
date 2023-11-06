@@ -1,10 +1,14 @@
 {
   "name": "auth-token-sender",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "react-scripts": "^5.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:client": "node src/get-auth-token.js",
+    "start:proxy": "node src/proxy-server.js",
+    "start": "npm run start:proxy & npm run start:client"
   },
   "repository": {
     "type": "git",
